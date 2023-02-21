@@ -1,3 +1,9 @@
 <div *ngFor="let i of (article$| async)?.article ">
-  <p>{{i.title}}</p>
+  
+  <p>{{i.user.name}}</p>
+  <img [src]="i.user.profile_image">
+  <h1>{{i.title}}</h1>
+  <p>{{i.description}}</p>
 </div>
+
+<router-outlet></router-outlet>
